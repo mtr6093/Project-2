@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const parts = require('../models').parts;
+const User = require('../models').User;
 
 router.get('/', (req, res) => {
     parts.findAll().then((parts) => {
@@ -33,18 +34,21 @@ router.put('/:id', (req, res) => {
 	parts.update(req.body, {
         where: { id: req.params.id},
         returning: true,
-    }).then((part) => {
+    }).then((parts) => {
     res.redirect('/parts'); 
 })
 });
 
-router.get('/:id', (req, res) => {
-    parts.findByPk(req.params.id).then((parts) => {
-    res.render('show.ejs', {
-        parts: parts,
+router.get("/:id", (req, res) => {
+    parts.findByPk(req.params.id, {
+        include : [User]
     })
+    .then(parts => {
+        res.render('show.ejs', {
+            parts: parts
+        });
     })
-});
+})
 
 router.delete('/:id', (req, res) =>{
     parts.destroy({where: { id: req.params.id } }).then(() => {

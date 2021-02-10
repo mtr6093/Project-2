@@ -8,18 +8,22 @@ module.exports = {
         {
           name: "o-ring",
           partNumber:"R51603",
+          userId: 1,
         },
         {
           name: "Grease",
           partNumber:"TY6376",
+          userId: 2,
         },
         {
           name: "LocTite",
           partNumber:"TY6304",
+          userId: 3,
         },
         {
           name: "Fuel Filter",
-          partNumber:"AR50041"
+          partNumber:"AR50041",
+          userId: 1,
         },
       ],
       {}

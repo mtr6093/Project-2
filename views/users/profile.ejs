@@ -35,7 +35,16 @@
         
     </nav>
     
+    
+    <h3>Parts added by you:</h3>
+    <% for (let i = 0; i < user.parts.length; i++){ %>
+            <li>
+               <a href="/parts/<%=user.parts[i].id%>"><%=user.parts[i].name%></a>
+            </li>
+            <br>
+    <% } %>
 
+    <br><br>
      
       
 </body>

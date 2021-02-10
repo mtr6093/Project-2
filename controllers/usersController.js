@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require('../models').User;
-
+const parts = require('../models').parts;
 
 
 // Index page, landing page
@@ -53,6 +53,12 @@ router.put("/profile/:id", (req, res) => {
 // Profile page get route
 router.get("/profile/:id", (req, res) => {
     User.findByPk(req.params.id, {
+        include: [
+          {
+            model: parts,
+            attributes: ["id", "name"],
+          },
+        ],
     }).then ((thisUser) =>{
       console.log(thisUser)
       res.render("users/profile.ejs", {
