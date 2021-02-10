@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="/css/app.css">
+</head>
+<body>
+    <h1>Shopping List For Parts</h1>
+    <nav>
+        <h1>New Parts Entry </h1>
+    <form action="/parts" method="POST">
+        Name: <input type="text" name="name" >
+        Part Number: <input type="text" name="partNumber" >
+        <input type="submit" name="" value="Create Parts Entry"/>
+    </form>
+    </nav>
+    <ul>
+        <% for(let i=0; i<parts.length; i++) { %>
+            <li>
+                <a href="/parts/<%=parts[i].id%>"> Name: <%=parts[i].name%> <br/>    Part Number: <%=parts[i].partNumber%></a> 
+                <br />
+                <a href="/parts/<%=parts[i].id %>/edit"> Edit</a> 
+                    <form action="/parts/<%=parts[i].id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                    </form>
+                    <br />
+            </li>
+        <% } %>
+    </ul>
+
+    
+  
+</body>
+</html>
