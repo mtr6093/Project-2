@@ -6,18 +6,18 @@ module.exports = {
       "Users",
       [
         {
-          name: "Tom Tom",
+          name: "Tom",
           username: "tom",
-          password: "tom1",
+          password: "$2a$10$3sDQubuZCvrIA35dazgvwOq1ZyTtrr4oqZAyL6mnL23EUhSpvmtNa",
           listid: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
           
         },
         {
-          name: "Joe Joe",
+          name: "Joe",
           username: "joe",
-          password: "joe1",
+          password: "$2a$10$3sDQubuZCvrIA35dazgvwOq1ZyTtrr4oqZAyL6mnL23EUhSpvmtNa",
           listid: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -26,7 +26,7 @@ module.exports = {
         {
           name: "Bailey Tom",
           username: "bailey",
-          password: "dog1",
+          password: "$2a$10$3sDQubuZCvrIA35dazgvwOq1ZyTtrr4oqZAyL6mnL23EUhSpvmtNa",
           listid: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
