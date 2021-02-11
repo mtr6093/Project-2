@@ -5,7 +5,7 @@ const Groceries = require('../models').Groceries;
 const User = require('../models').User;
 
 router.get('/', (req, res) => {
-    Groceries.findAll().then((groceries) => {
+    Groceries.findAll({order:['section']}).then((groceries) => {
         console.log(Groceries)
     res.render('groceries/index.ejs', {
         groceries: groceries,
