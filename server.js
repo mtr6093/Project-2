@@ -15,6 +15,7 @@ app.use(methodOverride('_method'));
 // middleware end
 app.use("/users", require("./controllers/usersController.js"));
 app.use("/parts", require("./controllers/partsController.js"));
+app.use("/groceries", require("./controllers/groceriesController.js"));
 
 app.listen(3000, ()=>{
     console.log("I am listening to you");

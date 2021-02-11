@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="/css/app.css">
+</head>
+<body>
+    <h1>Shopping List For Groceries</h1>
+    <nav>
+        <h1>New Grocery Entry </h1>
+    <form action="/groceries" method="POST">
+        Name: <input type="text" name="name" >
+        Store Section: <input type="text" name="section" >
+        <input type="submit" name="" value="Create Grocery Entry"/>
+    </form>
+    </nav>
+    <ul>
+        <% for(let i=0; i<groceries.length; i++) { %>
+            <li>
+                <a href="/groceries/<%=groceries[i].id%>"> Name: <%=groceries[i].name%> <br/>    Section of Store: <%=groceries[i].section%></a> 
+                <br />
+                <a href="/groceries/<%=groceries[i].id %>/edit"> Edit</a> 
+                    <form action="/groceries/<%=groceries[i].id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                    </form>
+                    <br />
+            </li>
+        <% } %>
+    </ul>
+
+    
+  
+</body>
+</html>

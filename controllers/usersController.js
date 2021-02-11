@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require('../models').User;
 const parts = require('../models').parts;
-
+const Groceries = require('../models').Groceries;
 
 // Index page, landing page
 router.get("/", (req,res) =>{
@@ -58,6 +58,10 @@ router.get("/profile/:id", (req, res) => {
             model: parts,
             attributes: ["id", "name"],
           },
+          {
+            model: Groceries,
+            attributes: ["id", "name"],
+          }
         ],
     }).then ((thisUser) =>{
       console.log(thisUser)

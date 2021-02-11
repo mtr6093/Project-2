@@ -32,7 +32,9 @@
     
       <h2>Lists available to you</h2>
     <nav>
-        <a href="/parts">Parts</a>
+        <a href="/parts">Parts</a><br />
+      
+        <a href="/groceries">Groceries</a>
         
     </nav>
     
@@ -42,10 +44,16 @@
             <li>
                <a href="/parts/<%=user.parts[i].id%>"><%=user.parts[i].name%></a>
             </li>
-            <br>
     <% } %>
 
-    <br><br>
+    
+
+    <h3>Groceries added by you:</h3>
+    <% for (let i = 0; i <user.Groceries.length; i++){ %>
+            <li>
+               <a href="/groceries/<%=user.Groceries[i].id%>"><%=user.Groceries[i].name%></a>
+            </li>
+    <% } %>
      
       
 </body>

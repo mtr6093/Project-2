@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="/css/app.css">
+</head>
+<body>
+    <h1>Part Info Page</h1>
+   Name: <%= Groceries.name %> <br />
+   Store Section: <%= Groceries.section %> <br />
+   This item was added by: <%=Groceries.User.name%>
+    <br />
+   <a href="/groceries/<%=Groceries.id %>/edit"> Edit</a>
+   <form action="/groceries/<%=Groceries.id %>?_method=DELETE" method="POST">
+       <input type="submit" value="DELETE"/>
+   </form>
+   <br /><br /><br />
+   
+    <nav>
+        <a href="/groceries/new">New Grocery Creation</a>
+        
+    </nav>
+</body>
+</html>
