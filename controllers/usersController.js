@@ -4,22 +4,43 @@ const User = require('../models').User;
 const parts = require('../models').parts;
 const Groceries = require('../models').Groceries;
 
+// This item was moved to the server.js file
+// Index page, landing page
+// router.get("/", (req,res) =>{
+//    res.render("users/index.ejs", {   
+//     });   
+// });
 
+// The items commented out below were moved to the auth controller 
+// Login get route
+// router.get('/login', (req, res) => {
+//     res.render('users/login.ejs');  
+// });
 
-
-
+// Login post
+// router.post('/login', (req, res)=>{
+//     User.findOne({
+//       where:{
+//         username:req.body.username,
+//         password:req.body.password
+//       }
+//     }).then((thisUser) => {
+//       res.redirect('/users/profile/'+thisUser.id);
+//       console.log(thisUser)
+//     })  
+//   })
 
 // Signup get route
-router.get('/signup', (req, res) => {
-    res.render('users/signup.ejs');
-});  
+// router.get('/signup', (req, res) => {
+//     res.render('users/signup.ejs');
+// });  
 
 // Signup post route
-router.post('/', (req, res)=>{
-  User.create(req.body).then((newUser) => {
-    res.redirect("users/profile/"+newUser.id);
-  });
-});
+// router.post('/', (req, res)=>{
+//   User.create(req.body).then((newUser) => {
+//     res.redirect("users/profile/"+newUser.id);
+//   });
+// });
 
 // Update put route
 router.put("/profile/:id", (req, res) => {
