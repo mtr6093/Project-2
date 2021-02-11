@@ -52,7 +52,7 @@ The user stories below are for future development:
 
 ## Development of This Website
 
-This website was developed using only HTML, Javascript, CSS and a Postgres server using Sequelize for associations. There are no software packages required for use as it is hosted by Heroku.
+This website was developed using only HTML, Javascript, CSS and Sequelize for associations. Hosted servers are using Postgres. There are no software packages required for use as it is hosted by Heroku.
 
 
 &copy; Marc Rivers
