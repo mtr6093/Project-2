@@ -4,29 +4,10 @@ const User = require('../models').User;
 const parts = require('../models').parts;
 const Groceries = require('../models').Groceries;
 
-// Index page, landing page
-router.get("/", (req,res) =>{
-   res.render("users/index.ejs", {   
-    });   
-});
 
-// Login get route
-router.get('/login', (req, res) => {
-    res.render('users/login.ejs');  
-});
 
-// Login post
-router.post('/login', (req, res)=>{
-    User.findOne({
-      where:{
-        username:req.body.username,
-        password:req.body.password
-      }
-    }).then((thisUser) => {
-      res.redirect('/users/profile/'+thisUser.id);
-      console.log(thisUser)
-    })  
-  })
+
+
 
 // Signup get route
 router.get('/signup', (req, res) => {
