@@ -34,6 +34,9 @@ Below is a list of users stories that were followed to create the existing funct
 
 11. As a user I want the grocery list sorted by sections of the store (i.e. all meat items listed together)
 
+## Known Issues
+
+Due to implementation of secure login and password storage, editing the password will break the ability to login to a users profile.
 
 ## Future Development
 
