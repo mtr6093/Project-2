@@ -40,7 +40,7 @@ Due to implementation of secure login and password storage, editing the password
 
 ## Future Development
 
-The user stories below are for future development:
+In addition to fixing the known issues, the user stories below are for future development:
 
 1. Create new/additional shopping lists
 
