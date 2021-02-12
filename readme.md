@@ -7,6 +7,9 @@ https://marc-project2-lists.herokuapp.com/
 
 As a user you can create, edit, and delete items from two different shopping lists. You can also see what items were entered by yourself on your profile page and see who entered each item on the shopping list by clicking on the item and viewing the item details.
 
+## Instalations
+
+There are no software packages required for use as it is hosted by Heroku at the link above.
 
 ## Current Features
 
@@ -55,7 +58,7 @@ In addition to fixing the known issues, the user stories below are for future de
 
 ## Development of This Website
 
-This website was developed using only HTML, Javascript, CSS and Sequelize for associations. Hosted servers are using Postgres. There are no software packages required for use as it is hosted by Heroku.
+This website was developed using HTML5, Javascript ES6, CSS, REST, CRUD, and Sequelize for associations. The site is using Cloud Based Hosting and the host servers are using Postgres for the database and tables. 
 
 
 &copy; Marc Rivers
