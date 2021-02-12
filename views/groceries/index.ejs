@@ -22,7 +22,7 @@
             <li>
                 <a href="/groceries/<%=groceries[i].id%>"> Name: <%=groceries[i].name%> <br/>    Section of Store: <%=groceries[i].section%></a> 
                 <br />
-                <a href="/groceries/<%=groceries[i].id %>/edit"> Edit</a> 
+                
                     <form action="/groceries/<%=groceries[i].id %>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE"/>
                     </form>
