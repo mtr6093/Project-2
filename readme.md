@@ -7,7 +7,7 @@ https://marc-project2-lists.herokuapp.com/
 
 As a user you can create, edit, and delete items from two different shopping lists. You can also see what items were entered by yourself on your profile page and see who entered each item on the shopping list by clicking on the item and viewing the item details.
 
-## Instalations
+## Installations
 
 There are no software packages required for use as it is hosted by Heroku at the link above.
 
